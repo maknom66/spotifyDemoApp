@@ -1,0 +1,9 @@
+{
+  "@api": "./src/api",
+  "@navigation": "./src/navigation",
+  "@components": "./src/components",
+  "@src": "./src",
+  "@screens": "./src/screens",
+  "@common": "./src/common",
+  "@theme": "./src/theme"
+}
