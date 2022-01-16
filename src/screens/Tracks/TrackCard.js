@@ -15,10 +15,13 @@ const PlaylistCard = ({item}) => {
   return (
     <TouchableOpacity onPress={handleOnPress}>
       <View alignItems="center" flexDirection="row" px={20} py={10}>
-        <View flex={1}>
-          <Image height={60} width={60} borderRadius={5} source={{uri: images?.[0]?.url}} />
-        </View>
-        <View flex={5} pr={10}>
+        <Image
+          height={60}
+          width={60}
+          borderRadius={5}
+          source={{uri: images?.[2]?.url || images?.[1]?.url || images?.[0]?.url}}
+        />
+        <View pr={10}>
           <Text pl={20} numberOfLines={1} fontWeight="bold">
             {name}
           </Text>

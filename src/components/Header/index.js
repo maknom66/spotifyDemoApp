@@ -10,10 +10,12 @@ import {scaledValue} from '@common/utils';
 export const Header = ({title, canGoBack}) => {
   const navigation = useNavigation();
   return (
-    <View width="100%" height={40} flexDirection="row" alignItems="center" pl={10}>
+    <View width="100%" height={60} flexDirection="row" alignItems="center" pl={10}>
       {canGoBack && (
         <TouchableOpacity onPress={() => navigation?.goBack()}>
-          <Ionicons name="chevron-back" size={scaledValue(30)} />
+          <View height={40} width={40} justifyContent="center">
+            <Ionicons name="chevron-back" size={scaledValue(30)} />
+          </View>
         </TouchableOpacity>
       )}
       {title && (

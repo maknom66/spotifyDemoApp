@@ -18,17 +18,19 @@ const requestHandler = request => {
 };
 
 const responseErrorHandler = error => {
-  // if (error.response) {
-  //   showMessage({
-  //     message: error.response?.data?.error || error.message || 'Something went wrong',
-  //     type: 'danger',
-  //   });
-  // } else if (error.request) {
-  //   showMessage({
-  //     message: error.message || 'Unable to make request',
-  //     type: 'danger',
-  //   });
-  // }
+  if (error.response) {
+    const setAccessToken = useSpotifyAuth?.getState()?.setAccessToken;
+    if (error?.response?.data?.error?.status === 401) setAccessToken(null);
+    showMessage({
+      message: error?.response?.data?.error?.message || error?.message || 'Something went wrong',
+      type: 'danger',
+    });
+  } else if (error?.request) {
+    showMessage({
+      message: error?.message || 'Unable to make request',
+      type: 'danger',
+    });
+  }
   return Promise.reject(error);
 };
 
