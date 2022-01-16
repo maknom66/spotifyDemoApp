@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {TouchableOpacity, useWindowDimensions} from 'react-native';
+import {TouchableOpacity} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 
 import {Image, Text, View} from '@elements';
@@ -7,7 +7,6 @@ import screenNames from '@navigation/screenNames';
 
 const PlaylistCard = ({item}) => {
   const navigation = useNavigation();
-  const {width} = useWindowDimensions();
 
   const handleOnPress = () => navigation?.navigate(screenNames?.Tracks, {playlist_id: item?.id});
 
