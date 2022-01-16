@@ -1,13 +1,13 @@
 import React, {useEffect, useCallback} from 'react';
 import queryString from 'query-string';
 import {FlatList, StyleSheet} from 'react-native';
-import {SafeAreaView} from 'react-native-safe-area-context';
 import {useFocusEffect} from '@react-navigation/native';
 
 import SpotifyAuth from './SpotifyAuth';
 import PlaylistCard from '@screens/Playlists/PlaylistCard';
 import EmptyCard from '@screens/Playlists/EmptyCard';
 import {Header} from '@components';
+import {SafeAreaView} from '@elements';
 import {useSpotify, useSpotifyAuth} from '@src/common/store';
 
 const styles = StyleSheet.create({
@@ -17,8 +17,13 @@ const styles = StyleSheet.create({
 const Playlists = ({route}) => {
   const {query_string} = route?.params || {};
   const {accessToken, setAccessToken, user, getUser} = useSpotifyAuth(state => state);
-  const {getRecommendedPlaylists, playlistsData, setPlaylistTracksData, loadingNextData} =
-    useSpotify(state => state);
+  const {
+    getRecommendedPlaylists,
+    playlistsData,
+    setPlaylistTracksData,
+    loadingNextData,
+    getNextData,
+  } = useSpotify(state => state);
 
   useFocusEffect(
     useCallback(() => {

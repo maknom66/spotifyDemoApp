@@ -1,4 +1,5 @@
 import * as React from 'react';
+import propTypes from 'prop-types';
 import {TouchableOpacity} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 
@@ -25,6 +26,17 @@ const PlaylistCard = ({item}) => {
       </View>
     </TouchableOpacity>
   );
+};
+
+PlaylistCard.propTypes = {
+  item: propTypes.shape({
+    id: propTypes.string.isRequired,
+    images: propTypes.array.isRequired,
+    name: propTypes.string.isRequired,
+    tracks: propTypes.shape({
+      total: propTypes.number.isRequired,
+    }),
+  }),
 };
 
 export default PlaylistCard;

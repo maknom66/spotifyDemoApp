@@ -1,12 +1,13 @@
 import React from 'react';
+import propTypes from 'prop-types';
 import {TouchableOpacity} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 
 import {Image, Text, View} from '@elements';
 import screenNames from '@navigation/screenNames';
 
-const PlaylistCard = ({item}) => {
-  const {track: {id, name, popularity, album: {artists, images} = {}} = {}} = item;
+const TrackCard = ({item}) => {
+  const {track: {name, popularity, album: {artists, images} = {}} = {}} = item;
   const artistNames = artists?.map(({name}) => name)?.join(', ');
   const navigation = useNavigation();
 
@@ -37,4 +38,17 @@ const PlaylistCard = ({item}) => {
   );
 };
 
-export default PlaylistCard;
+TrackCard.propTypes = {
+  item: propTypes.shape({
+    track: propTypes.shape({
+      name: propTypes.string.isRequired,
+      popularity: propTypes.number.isRequired,
+      album: propTypes.shape({
+        artists: propTypes.array.isRequired,
+        images: propTypes.array.isRequired,
+      }),
+    }),
+  }),
+};
+
+export default TrackCard;

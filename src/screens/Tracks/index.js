@@ -1,10 +1,10 @@
-import React, {useState, useRef} from 'react';
+import React, {useState} from 'react';
 import {FlatList, StyleSheet} from 'react-native';
-import {SafeAreaView} from 'react-native-safe-area-context';
 
 import TrackCard from '@screens/Tracks/TrackCard';
 import EmptyCard from '@screens/Tracks/EmptyCard';
 import {Header} from '@components';
+import {SafeAreaView} from '@elements';
 import {useSpotify} from '@src/common/store';
 
 const styles = StyleSheet.create({
