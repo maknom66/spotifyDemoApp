@@ -9,10 +9,6 @@ import {useSpotifyAuth} from '@src/common/store';
 const SpotifyAuth = () => {
   const accessToken = useSpotifyAuth(state => state?.accessToken);
 
-  const handleURLChange = e => {
-    console.log(e);
-  };
-
   return (
     <Modal
       animationType="fade"
@@ -20,7 +16,7 @@ const SpotifyAuth = () => {
       visible={!accessToken}
       onRequestClose={() => setIsLoginModalVisible(false)}>
       <SafeAreaView style={{flex: 1}}>
-        <WebView source={{uri: authURI}} onShouldStartLoadWithRequest={handleURLChange} />
+        <WebView source={{uri: authURI}} />
       </SafeAreaView>
     </Modal>
   );

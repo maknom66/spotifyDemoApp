@@ -27,8 +27,6 @@ const linking = {
   config,
 };
 
-// spotifydemoapp://callback/#access_token=BQAxLCHvqbMXpUOqjOCeiLDHIXWH64yuvc3E-3EQ96UJEvqotpG4MFdk-ka1vSvH6PjyV1Sg3amjpxwM3BlRSi1NaTufrO6vJCO_o1QlDqm5VA6DnFrBVfoA6osEvEtc8rs3Co3JJwZ7wL0FaylHxQBoTjfmIdDCtIfdnOzHxkgzzq7h&token_type=Bearer&expires_in=3600
-
 const App = () => {
   useEffect(() => {
     RNBootSplash.hide({fade: true});

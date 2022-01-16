@@ -1,11 +1,15 @@
 import React, {useState, useRef} from 'react';
-import {FlatList} from 'react-native';
+import {FlatList, StyleSheet} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 
 import TrackCard from '@screens/Tracks/TrackCard';
 import EmptyCard from '@screens/Tracks/EmptyCard';
 import {Header} from '@components';
 import {useSpotify} from '@src/common/store';
+
+const styles = StyleSheet.create({
+  footer: {paddingBottom: 80},
+});
 
 const Tracks = ({route}) => {
   const {playlist_id} = route?.params;
@@ -28,6 +32,7 @@ const Tracks = ({route}) => {
       <Header title="Playlist Tracks" />
       <FlatList
         data={playlistTracksData?.items}
+        contentContainerStyle={styles.footer}
         ListEmptyComponent={() =>
           new Array(20).fill(0).map((_, index) => <EmptyCard key={index} />)
         }
