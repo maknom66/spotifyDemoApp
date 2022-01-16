@@ -1,5 +1,6 @@
 {
   "@api": "./src/api",
+  "@assets": "./src/assets",
   "@navigation": "./src/navigation",
   "@elements": "./src/elements",
   "@components": "./src/components",
