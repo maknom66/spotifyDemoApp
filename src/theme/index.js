@@ -1,13 +1,21 @@
 import {scaledValue} from '@common/utils';
 
+const scaledValueAliases = {
+  xxs: scaledValue(10),
+  xs: scaledValue(12),
+  s: scaledValue(14),
+  m: scaledValue(16),
+  l: scaledValue(18),
+  xl: scaledValue(24),
+  xxl: scaledValue(32),
+};
+
 const theme = {
-  sizes: {
-    xs: () => scaledValue(12),
-    sm: () => scaledValue(14),
-    md: () => scaledValue(16),
-    lg: () => scaledValue(18),
-    xl: () => scaledValue(16),
-    xxl: () => scaledValue(32),
+  fontSizes: {
+    ...scaledValueAliases,
+  },
+  space: {
+    ...scaledValueAliases,
   },
 };
 

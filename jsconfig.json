@@ -4,7 +4,8 @@
     "paths": {
       "@api/*": ["./src/api/*"],
       "@navigation/*": ["./src/navigation/*"],
-      "@components/*": ["./src/components/*"],
+      "@components": ["./src/components"],
+      "@elements": ["./src/elements"],
       "@src/*": ["./src/*"],
       "@screens/*": ["./src/screens/*"],
       "@common/*": ["./src/common/*"],

@@ -1,6 +1,7 @@
 {
   "@api": "./src/api",
   "@navigation": "./src/navigation",
+  "@elements": "./src/elements",
   "@components": "./src/components",
   "@src": "./src",
   "@screens": "./src/screens",
