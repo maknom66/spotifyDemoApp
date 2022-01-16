@@ -43,8 +43,11 @@
     "@babel/core": "^7.12.9",
     "@babel/runtime": "^7.12.5",
     "@react-native-community/eslint-config": "^2.0.0",
+    "@types/jest": "^27.4.0",
     "babel-jest": "^26.6.3",
     "babel-plugin-module-resolver": "^4.1.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
     "eslint": "7.14.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-import-resolver-babel-module": "^5.3.1",
@@ -56,13 +59,25 @@
     "eslint-plugin-react-native": "^4.0.0",
     "husky": "^7.0.4",
     "jest": "^26.6.3",
+    "jest-enzyme": "^7.1.2",
+    "jest-transform-stub": "^2.0.0",
     "lint-staged": "^12.1.7",
     "metro-react-native-babel-preset": "^0.66.2",
     "prettier": "^2.5.1",
+    "react-dom": "^17.0.2",
     "react-test-renderer": "17.0.2"
   },
   "jest": {
-    "preset": "react-native"
+    "preset": "react-native",
+    "transformIgnorePatterns": [
+      "node_modules/(?!@react-native|react-native)"
+    ],
+    "moduleNameMapper": {
+      "^.+.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub"
+    },
+    "setupFiles": [
+      "<rootDir>/__mocks__/mock.js"
+    ]
   },
   "resolutions": {
     "styled-components": "^5"
