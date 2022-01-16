@@ -1,4 +1,5 @@
 import * as React from 'react';
+import propTypes from 'prop-types';
 import {TouchableOpacity} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 
@@ -14,7 +15,7 @@ const PlaylistCard = ({item}) => {
     <TouchableOpacity onPress={handleOnPress}>
       <View alignItems="center" flexDirection="row" p={20}>
         <Image height={120} width={120} borderRadius={10} source={{uri: item?.images?.[0]?.url}} />
-        <View>
+        <View flex={1}>
           <Text pl={20} fontSize="m">
             {item?.name}
           </Text>
@@ -25,6 +26,17 @@ const PlaylistCard = ({item}) => {
       </View>
     </TouchableOpacity>
   );
+};
+
+PlaylistCard.propTypes = {
+  item: propTypes.shape({
+    id: propTypes.string.isRequired,
+    images: propTypes.array.isRequired,
+    name: propTypes.string.isRequired,
+    tracks: propTypes.shape({
+      total: propTypes.number.isRequired,
+    }),
+  }),
 };
 
 export default PlaylistCard;

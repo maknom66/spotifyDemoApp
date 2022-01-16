@@ -4,8 +4,14 @@ module.exports = {
     es6: true,
     node: true,
     'react-native/react-native': true,
+    jest: true,
   },
-  extends: ['eslint:recommended', 'plugin:react/recommended', 'plugin:prettier/recommended', 'plugin:promise/recommended'],
+  extends: [
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:prettier/recommended',
+    'plugin:promise/recommended',
+  ],
   settings: {
     react: {
       version: 'detect',
@@ -29,6 +35,7 @@ module.exports = {
   plugins: ['react', 'react-native', 'import'],
   rules: {
     eqeqeq: ['error', 'always'],
+    'prettier/prettier': 0,
     'import/no-unresolved': 2,
     'no-console': 2,
     'prefer-const': 2,

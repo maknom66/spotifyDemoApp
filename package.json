@@ -11,9 +11,9 @@
     "android:dev": "react-native run-android --variant=developmentdebug",
     "android:staging": "react-native run-android --variant=stagingdebug",
     "android:prod": "react-native run-android --variant=productiondebug",
-    "ios:dev": "react-native run-ios --scheme 'Development'",
-    "ios:staging": "react-native run-ios --scheme 'Staging'",
-    "ios:prod": "react-native run-ios --scheme 'Production'"
+    "ios:dev": "react-native run-ios --scheme 'spotifyDemoApp Development'",
+    "ios:staging": "react-native run-ios --scheme 'spotifyDemoApp Staging'",
+    "ios:prod": "react-native run-ios --scheme 'spotifyDemoApp Production'"
   },
   "dependencies": {
     "@react-native-masked-view/masked-view": "^0.2.6",

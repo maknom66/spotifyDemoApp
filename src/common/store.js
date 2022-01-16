@@ -2,7 +2,7 @@ import create from 'zustand';
 
 import {getUser, getRecommendedPlaylists, getPlaylistTracksData, getNextData} from '@api/spotify';
 
-export const useSpotifyAuth = create((set, get) => ({
+export const useSpotifyAuth = create(set => ({
   user: null,
   accessToken: null,
   setAccessToken: accessToken => {
@@ -26,7 +26,7 @@ export const useSpotify = create((set, get) => ({
     const res = await getPlaylistTracksData(playlist_id);
     set({playlistTracksData: res?.data});
   },
-  setPlaylistTracksData: async playlistTracksData => {
+  setPlaylistTracksData: playlistTracksData => {
     set({playlistTracksData});
   },
   getNextData: async (type, url) => {

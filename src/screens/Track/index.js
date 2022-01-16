@@ -1,9 +1,8 @@
 import dayjs from 'dayjs';
 import React from 'react';
-import {SafeAreaView} from 'react-native-safe-area-context';
 
 import {Header} from '@components';
-import {Image, Text, View} from '@elements';
+import {Image, Text, View, SafeAreaView} from '@elements';
 
 const Track = ({route}) => {
   const {
