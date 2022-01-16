@@ -12,6 +12,7 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		395A90D327943AF600A5A061 /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 395A90D227943AF600A5A061 /* BootSplash.storyboard */; };
+		395A90D52794546800A5A061 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 395A90D42794546800A5A061 /* main.jsbundle */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		9942058D778599B09CFA9775 /* libPods-spotifyDemoApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4333A97A52E85A21C459216C /* libPods-spotifyDemoApp.a */; };
 		BB177650B8A2BB986991B7E7 /* libPods-spotifyDemoApp-spotifyDemoAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5570EFD2D539DA418A764FE /* libPods-spotifyDemoApp-spotifyDemoAppTests.a */; };
@@ -44,6 +45,7 @@
 		242A1090D1C74774BC0AB02C /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
 		3268C11CBC834433B48DF111 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
 		395A90D227943AF600A5A061 /* BootSplash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BootSplash.storyboard; path = spotifyDemoApp/BootSplash.storyboard; sourceTree = "<group>"; };
+		395A90D42794546800A5A061 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 		4333A97A52E85A21C459216C /* libPods-spotifyDemoApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-spotifyDemoApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C48E00A87C343A5B4A5CDF3 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
 		4D5D8CA583E0E7036509E658 /* Pods-spotifyDemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-spotifyDemoApp.release.xcconfig"; path = "Target Support Files/Pods-spotifyDemoApp/Pods-spotifyDemoApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 		13B07FAE1A68108700A75B9A /* spotifyDemoApp */ = {
 			isa = PBXGroup;
 			children = (
+				395A90D42794546800A5A061 /* main.jsbundle */,
 				395A90D227943AF600A5A061 /* BootSplash.storyboard */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -288,6 +291,7 @@
 				395A90D327943AF600A5A061 /* BootSplash.storyboard in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				395A90D52794546800A5A061 /* main.jsbundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

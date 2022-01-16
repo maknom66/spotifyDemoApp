@@ -14,7 +14,7 @@ const PlaylistCard = ({item}) => {
     <TouchableOpacity onPress={handleOnPress}>
       <View alignItems="center" flexDirection="row" p={20}>
         <Image height={120} width={120} borderRadius={10} source={{uri: item?.images?.[0]?.url}} />
-        <View>
+        <View flex={1}>
           <Text pl={20} fontSize="m">
             {item?.name}
           </Text>

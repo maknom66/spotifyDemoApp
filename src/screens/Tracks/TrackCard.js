@@ -21,7 +21,7 @@ const PlaylistCard = ({item}) => {
           borderRadius={5}
           source={{uri: images?.[2]?.url || images?.[1]?.url || images?.[0]?.url}}
         />
-        <View pr={10}>
+        <View pr={10} flex={1}>
           <Text pl={20} numberOfLines={1} fontWeight="bold">
             {name}
           </Text>
